@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('child_post', function (Blueprint $table) {
+        Schema::create('schedules', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('post_id')->constrained()->onDelete('cascade');
-            $table->foreignId('child_id')->constrained()->onDelete('cascade');
+            $table->date('start_date')->comment('開始日');
+            $table->date('end_date')->comment('終了日');
+            $table->string('schedule_name')->comment('スケジュール名');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('child_post');
+        Schema::dropIfExists('schedules');
     }
 };

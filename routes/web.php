@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController; //Add
 use App\Models\Post; //Add
 use App\Http\Controllers\TopPageController; //Add
 use App\Http\Controllers\ChildController; //Add
+use App\Http\Controllers\ScheduleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,6 +50,11 @@ Route::post('/posts/update',[PostController::class,"update"])->name('post_update
 Route::get('/childrencreate',[ChildController::class,"create"])->name('child_create');
 Route::post('/children',[ChildController::class,"store"])->name('child_store');
 
+
+//イベント登録
+Route::get('/calendar', function () {return view('calendar');});
+Route::post('/schedule-add', [ScheduleController::class, 'scheduleAdd'])->name('schedule-add');
+Route::post('/schedule-get', [ScheduleController::class, 'scheduleGet'])->name('schedule-get');
 
 
 
