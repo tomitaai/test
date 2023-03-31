@@ -5,9 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Child;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Validator;
-use Auth; 
+use Illuminate\View\View;
+use Auth;
+
 
 
 class ChildController extends Controller
@@ -52,7 +57,8 @@ foreach ($request->child_names as $child_name){
         $children->save();
 }
 
-        return view('top');
+        //return view('top');
+        return redirect(RouteServiceProvider::HOME);
 
     }
 

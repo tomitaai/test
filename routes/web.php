@@ -3,11 +3,16 @@
 use App\Http\Controllers\ProfileController;//9.43.x~
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-use App\Http\Controllers\PostController; //Add
-use App\Models\Post; //Add
 use App\Http\Controllers\TopPageController; //Add
+use App\Http\Controllers\PostController; //Add
 use App\Http\Controllers\ChildController; //Add
 use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\MailmasterController;
+use App\Models\Post; //Add
+use App\Models\Child; //Add
+use App\Models\Schedule; //Add
+use App\Models\Mailmaster; //Add
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,6 +60,16 @@ Route::post('/children',[ChildController::class,"store"])->name('child_store');
 Route::get('/calendar', function () {return view('calendar');});
 Route::post('/schedule-add', [ScheduleController::class, 'scheduleAdd'])->name('schedule-add');
 Route::post('/schedule-get', [ScheduleController::class, 'scheduleGet'])->name('schedule-get');
+
+//メールマスタ
+Route::get('/10000', function () {return view('mail.10000');});
+Route::get('/mailmasterscreate',[MailmasterController::class,"create"])->name('mailmasterscreate');
+Route::post('/mailmasters',[MailmasterController::class,"store"])->name('mailmastersstore');
+
+
+
+//notification：一覧表示
+Route::get('/posts', [PostController::class,'index'])->middleware(['auth'])->name('post_index');
 
 
 

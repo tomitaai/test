@@ -13,6 +13,7 @@ class Schedule extends Model
     'start_date',
     'end_date',
     'schedule_name',
+    'user_id',
     ];
     protected $dates = [
     'start_date',

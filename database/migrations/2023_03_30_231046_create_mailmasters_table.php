@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('schedules', function (Blueprint $table) {
+        Schema::create('mailmasters', function (Blueprint $table) {
             $table->id();
-            $table->date('start_date')->comment('開始日');
-            $table->date('end_date')->comment('終了日');
-            $table->string('schedule_name')->comment('スケジュール名');
-            $table->bigInteger('user_id');
+            $table->string('mail_name'); //通知の種類
+            $table->string('title'); //タイトル
+			$table->text('body'); //本文（メール本文のテンプレートを定義したbladeファイル名）
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schedules');
+        Schema::dropIfExists('mailmasters');
     }
 };

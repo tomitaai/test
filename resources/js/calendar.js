@@ -28,7 +28,7 @@ let calendar = new Calendar(calendarEl, {
         if (scheduleName) {
             // Laravelの登録処理の呼び出し
             axios
-                .post("/schedule-add", {
+                .post("/test/public/schedule-add", {
                     start_date: info.start.valueOf(),
                     end_date: info.end.valueOf(),
                     schedule_name: scheduleName,
@@ -51,7 +51,7 @@ let calendar = new Calendar(calendarEl, {
     events: function (info, successCallback, failureCallback) {
         // Laravelのイベント取得処理の呼び出し
         axios
-            .post("/schedule-get", {
+            .post("/test/public/schedule-get", {
                 start_date: info.start.valueOf(),
                 end_date: info.end.valueOf(),
             })
@@ -63,7 +63,7 @@ let calendar = new Calendar(calendarEl, {
             })
             .catch(() => {
                 // バリデーションエラーなど
-                alert("登録に失敗しました");
+                alert("登録に失敗しました。");
             });
     },
 });

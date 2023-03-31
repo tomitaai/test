@@ -29,6 +29,7 @@ class ScheduleController extends Controller
         $schedule->start_date = date('Y-m-d', $request->input('start_date') / 1000);
         $schedule->end_date = date('Y-m-d', $request->input('end_date') / 1000);
         $schedule->schedule_name = $request->input('schedule_name');
+        $children->user_id = Auth::id();
         $schedule->save();
 
         return;
