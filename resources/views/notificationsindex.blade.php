@@ -1,53 +1,53 @@
 <x-app-layout>
 
-    <!--ヘッダー[START]-->
-    <x-slot name="header">
-                <div class="sticky top-0 shrink-0">
+	<!--ヘッダー[START]-->
+	<x-slot name="header">
+		<div class="flex justify-between">
+			<div class="flex">
+				<div class="sticky top-0 shrink-0">
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
                     </a>
                 </div>
-    </x-slot>
+        	</div>
+	        <div class="sm:flex sm:items-center">
+		        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+		            Notification
+		        </h2>
+            </div>
+        </div>
+  	</x-slot>
+    <!--ヘッダー[END]-->
+            
+        <!-- バリデーションエラーの表示に使用-->
+       <x-errors id="errors" class="bg-blue-500 rounded-lg">{{$errors}}</x-errors>
+        <!-- バリデーションエラーの表示に使用-->
+        
 
-<div class="bg-white sticky mx-auto flex w-full sm:max-w-md py-6 sm:py-8 lg:py-12">
-  <div class="mx-auto">
-    <div class="mx-auto flex max-w-xl flex-col items-center text-center">
-      <p class="text-left mb-10 font-semibold text-gray-900 md:mb-12 md:text-2xl xl:text-3xl">
-      いつまでも。</br>この日々を、ぬくもりを。</p>
-      <p class="justify-center mb-4 font-semibold text-gray-800 md:mb-6 md:text-lg xl:text-xl">
-        子どもたちと別々に暮らす日がきても</br>
-世界がどのように変化しようとも</br></br>
+    <!--全エリア[START]-->
 
-ともに過ごした、この日々が</br>
-あなたを包む、この愛が</br></br>
 
-時空、空間を超えて</br>
-それぞれの人生を灯台のように</br>
-明るく照らしますように。</p>
-    </div>
-  </div>
-</div>
+                @foreach ($mailmasters as $mailmaster)
+                    <x-collection3 id="{{ $mailmaster->id }}" title="{{ $mailmaster->title }}" body="{{ $mailmaster->body }}"></x-collection3>
+                @endforeach
 
+
+
+
+ <!--全エリア[END]-->
 
 <div class="bg-white">
   <!-- nav - start -->
   <nav class="sticky bottom-0 mx-auto flex w-full justify-between gap-8 border-t bg-white px-10 py-4 text-xs sm:max-w-md sm:rounded-t-xl sm:border-transparent sm:text-sm sm:shadow-2xl">
+    <a href={{ url('/dashboard') }} class="flex flex-col items-center gap-1 text-indigo-500">
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+        <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+      </svg>
 
-    <a href={{ url('/notifications') }} class="flex flex-col items-center gap-1 text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-<svg class="h-6 w-6" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#9D9C9C;}
-</style>
-<g>
-	<path class="st0" d="M496.6,68.8H15.4C6.9,68.8,0,75.8,0,84.3v30.4l256,171.5l256-171.6V84.3C512,75.8,505.1,68.8,496.6,68.8z"/>
-	<path class="st0" d="M0,178v203.4c0,34.1,27.6,61.8,61.8,61.8h388.4c34.1,0,61.8-27.6,61.8-61.8V178L256,349.6L0,178z"/>
-</g>
-</svg>      
-
-      <span>message</span>
+      <span>Home</span>
     </a>
-    
+
     <a href={{ url('/answers') }} class="flex flex-col items-center gap-1 text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
       <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
         <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd" />
@@ -70,27 +70,11 @@
 		c-6,0-8-3.9-4.3-8.8l53.4-70.4c3.7-4.8,9.6-4.8,13.3,0l53.4,70.4C319.7,292.3,317.8,296.2,311.7,296.2z"/>
 </g>
 </svg>
+
       <span>Upload</span>
     </a>
 
-    <a href="{{ url('/posts') }}" class="flex flex-col items-center gap-1 text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#A9A9A9;}
-</style>
-<g>
-	<path class="st0" d="M84.5,84.5V512H512V84.5H84.5z M220.7,184.8c24,0,43.5,19.5,43.5,43.5s-19.5,43.5-43.5,43.5
-		s-43.5-19.5-43.5-43.5C177.2,204.2,196.7,184.8,220.7,184.8z M463.9,407.2c-1.5,2.8-4.4,4.5-7.6,4.5H140.2c-3.2,0-6-1.7-7.5-4.5
-		c-1.5-2.8-1.4-6.2,0.4-8.8l55.3-84.3c3.7-5.6,9.7-9.2,16.4-9.6c6.7-0.5,13.2,2.2,17.6,7.2l38.2,43.2l69.1-105.2
-		c4-6,10.7-9.7,17.9-9.7c7.2,0,14,3.6,17.9,9.6l98.1,148.7C465.3,401.1,465.4,404.5,463.9,407.2z"/>
-	<polygon class="st0" points="450.5,0 0,0 0,450.5 46.1,450.5 46.1,46.1 450.5,46.1 	"/>
-</g>
-</svg>
 
-      <span>List</span>
-    </a>
-    
     <a href="{{ url('/profile') }}" class="flex flex-col items-center gap-1 text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
 <svg class="h-6 w-6" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -117,6 +101,5 @@
   </nav>
   <!-- nav - end -->
 </div>
-
 
 </x-app-layout>

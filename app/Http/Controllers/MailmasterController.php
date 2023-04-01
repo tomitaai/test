@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mailmaster;
+use App\Models\Answer;
+use App\Models\Post;
+use App\Models\Child;
 use Illuminate\Http\Request;
 use Validator;
 use Auth;
@@ -16,7 +19,11 @@ class MailmasterController extends Controller
      */
     public function index()
     {
-        //
+        $mailmasters = Mailmaster::all();
+        return view('notificationsindex', [
+            'mailmasters' => $mailmasters
+        ]);
+
     }
 
     /**

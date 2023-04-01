@@ -65,10 +65,6 @@ Route::get('/calendar', function () {return view('calendar');});
 Route::post('/schedule-add', [ScheduleController::class, 'scheduleAdd'])->name('schedule-add');
 Route::post('/schedule-get', [ScheduleController::class, 'scheduleGet'])->name('schedule-get');
 
-//メールマスタ
-Route::get('/10000', function () {return view('mail.10000');});
-Route::get('/mailmasterscreate',[MailmasterController::class,"create"])->name('mailmasterscreate');
-Route::post('/mailmasters',[MailmasterController::class,"store"])->name('mailmastersstore');
 
 
 //質問リストマスタ
@@ -107,9 +103,16 @@ Route::post('/answers/update',[AnswerController::class,"update"])->name('answer_
 
 
 
+//メールマスタ
+Route::get('/10000', function () {return view('mail.10000');});
+Route::get('/10100', function () {return view('mail.10100');});
+
+Route::get('/mailmasterscreate',[MailmasterController::class,"create"])->name('mailmasterscreate');
+Route::post('/mailmasters',[MailmasterController::class,"store"])->name('mailmastersstore');
+
 
 //notification：一覧表示
-Route::get('/posts', [PostController::class,'index'])->middleware(['auth'])->name('post_index');
+Route::get('/notifications', [MailmasterController::class,'index'])->middleware(['auth'])->name('notification_index');
 
 
 
