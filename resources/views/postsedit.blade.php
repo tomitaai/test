@@ -53,7 +53,7 @@
                         撮影日
                       </label>
         <input name="shooting_date" type="date" value="{{$post->shooting_date->format(config('const.format.date'))}}" 
-        class="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none bg-gray-100 focus:border-gray-500"  placeholder="">
+        class="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none bg-gray-100 focus:border-gray-500"  placeholder="">
 
 
 

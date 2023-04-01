@@ -32,7 +32,7 @@ class ScheduleController extends Controller
         $children->user_id = Auth::id();
         $schedule->save();
 
-        return;
+        return view('mail.10000');
     }
     
     

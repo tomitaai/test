@@ -57,8 +57,7 @@ foreach ($request->child_names as $child_name){
         $children->save();
 }
 
-        //return view('top');
-        return redirect(RouteServiceProvider::HOME);
+        return redirect('/answerscreate1');//return redirect(RouteServiceProvider::HOME);
 
     }
 

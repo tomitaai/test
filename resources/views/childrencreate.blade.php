@@ -1,14 +1,23 @@
 <x-app-layout>
 
-	<!--ヘッダー[START]-->
+    <!--ヘッダー[START]-->
 	<x-slot name="header">
-		<h2 class="font-semibold text-xl text-gray-800 leading-tight">
-			<form action="{{ route('post_index') }}" method="GET" class="w-full max-w-lg">
-				<x-button class="bg-gray-100 text-gray-900">{{ __('Dashboard') }}：更新画面</x-button>
-			</form>
-		</h2>
-	</x-slot>
-	<!--ヘッダー[END]-->
+		<div class="flex justify-between">
+			<div class="flex">
+				<div class="sticky top-0 shrink-0">
+                    <a href="{{ route('dashboard') }}">
+                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                    </a>
+                </div>
+        	</div>
+	        <div class="sm:flex sm:items-center">
+		        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+		            Children
+		        </h2>
+            </div>
+        </div>
+  	</x-slot>
+    <!--ヘッダー[END]-->
 
 	<!-- バリデーションエラーの表示に使用-->
 	<x-errors id="errors" class="bg-blue-500 rounded-lg">{{$errors}}</x-errors>

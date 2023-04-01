@@ -46,6 +46,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return view('childrencreate');//return redirect(RouteServiceProvider::HOME);
+        return redirect('/childrencreate');//return redirect(RouteServiceProvider::HOME);
     }
 }
