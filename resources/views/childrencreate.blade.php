@@ -1,27 +1,21 @@
 <x-app-layout>
 
     <!--ヘッダー[START]-->
-	<x-slot name="header">
-		<div class="flex justify-between">
-			<div class="flex">
-				<div class="sticky top-0 shrink-0">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a>
-                </div>
-        	</div>
-	        <div class="sm:flex sm:items-center">
-		        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+    	<x-slot name="header">
+        	<div class="flex justify-center">
+		        <h2 class="font-extrabold text-2xl bg-clip-text text-transparent bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-white-100 to-orange-500">
 		            Children
 		        </h2>
-            </div>
-        </div>
-  	</x-slot>
+			</div>
+	</x-slot>
+
     <!--ヘッダー[END]-->
 
 	<!-- バリデーションエラーの表示に使用-->
 	<x-errors id="errors" class="bg-blue-500 rounded-lg">{{$errors}}</x-errors>
 	<!-- バリデーションエラーの表示に使用-->
+			<div class="bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-slate-100 to-orange-500">
+
 	
 <div class="grid grid-cols-1">
 	<div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8">
@@ -38,7 +32,7 @@
 
 
 
-		<form action="{{ url('children') }}" method="POST" class="w-full max-w-lg">
+		<form action="{{ url('children') }}" method="POST" class="w-full max-w-lg bg-white">
 			@csrf
 
 			<div class="px-6 py-4">
@@ -50,7 +44,7 @@
 
 <table class="table table-bordered" id="dynamic">  
 <tr>  
-<td><input type="text" name="child_names[0]" placeholder="" class="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" /></td>  
+<td><input type="text" name="child_names[0]" placeholder="" class="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight bg-gray-100 focus:outline-none focus:border-gray-500" /></td>  
 <td><button type="button" name="add" id="add" class="btn btn-success text-gray-700 text-xs">追加</button></td>  
 </tr>  
 </table> 
@@ -60,7 +54,7 @@
 var i = 0;
 $("#add").click(function(){
 ++i;
-$("#dynamic").append('<tr><td><input type="text" name="child_names['+i+']" placeholder="" class="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" /></td><td><button type="button" class="btn btn-danger remove text-gray-700 text-xs">削除</button></td></tr>');
+$("#dynamic").append('<tr><td><input type="text" name="child_names['+i+']" placeholder="" class="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight bg-gray-100 focus:outline-none focus:border-gray-500" /></td><td><button type="button" class="btn btn-danger remove text-gray-700 text-xs">削除</button></td></tr>');
 });
 $(document).on('click', '.remove', function(){  
 $(this).parents('tr').remove();

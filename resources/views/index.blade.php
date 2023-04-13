@@ -2,21 +2,12 @@
 
 	<!--ヘッダー[START]-->
 	<x-slot name="header">
-		<div class="flex justify-between">
-			<div class="flex">
-				<div class="sticky top-0 shrink-0">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a>
-                </div>
-        	</div>
-	        <div class="sm:flex sm:items-center">
-		        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-		            list
+        	<div class="flex justify-center">
+		        <h2 class="font-extrabold text-2xl bg-clip-text text-transparent bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-white-100 to-orange-500">
+		            List
 		        </h2>
-            </div>
-        </div>
-  	</x-slot>
+			</div>
+	</x-slot>
     <!--ヘッダー[END]-->
             
         <!-- バリデーションエラーの表示に使用-->

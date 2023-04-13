@@ -2,20 +2,11 @@
 
 	<!--ヘッダー[START]-->
 	<x-slot name="header">
-		<div class="flex justify-between">
-			<div class="flex">
-				<div class="sticky top-0 shrink-0">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a>
-                </div>
-        	</div>
-	        <div class="sm:flex sm:items-center">
-		        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-		            Questionnaire
+        	<div class="flex justify-center">
+		        <h2 class="font-extrabold text-2xl bg-clip-text text-transparent bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-white-100 to-orange-500">
+		            Hearing Sheet
 		        </h2>
-            </div>
-        </div>
+			</div>
 	</x-slot>
 	<!--ヘッダー[END]-->
 
@@ -23,18 +14,20 @@
 	<x-errors id="errors" class="bg-blue-500 rounded-lg">{{$errors}}</x-errors>
 	<!-- バリデーションエラーの表示に使用-->
 	
-	
-	
+		<div class="bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-slate-100 to-orange-500">
+
+
+
+
 	<div class="py-6 sm:py-8 lg:py-12">
   <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
     <!-- text - start -->
     <div class="mb-10 md:mb-16">
-      <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">ヒアリングシート</h2>
 
-      <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
+      <p class="mx-auto max-w-screen-md text-center text-white md:text-lg">
       	ご家族にとってピッタリな動画を提案します。
       </br>いまの気持ちを教えてください。</p>
-      <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-xs">
+      <p class="mx-auto max-w-screen-md text-center text-white md:text-xs">
       	あとで回答する場合は、空欄のまま進んでください。</p>      
     </div>
     <!-- text - end -->

@@ -33,6 +33,9 @@ use App\Models\Answer;
 Route::get('/', [TopPageController::class,'show'])->middleware(['auth'])->name('top');
 Route::get('/dashboard', [TopPageController::class,'show'])->middleware(['auth'])->name('dashboard');
 
+Route::get('/proposal', [TopPageController::class,'show'])->middleware(['auth'])->name('top');
+
+
 //post：一覧表示
 Route::get('/posts', [PostController::class,'index'])->middleware(['auth'])->name('post_index');
 
@@ -85,11 +88,14 @@ Route::get('/answerscreate1',[AnswerController::class,"create1"])->name('answers
 Route::get('/answerscreate2',[AnswerController::class,"create2"])->name('answerscreate2');
 Route::get('/answerscreate3',[AnswerController::class,"create3"])->name('answerscreate3');
 Route::get('/answerscreate4',[AnswerController::class,"create4"])->name('answerscreate4');
+Route::get('/answerscreate5',[AnswerController::class,"create5"])->name('answerscreate5');
+
 
 Route::post('/answers1',[AnswerController::class,"store1"])->name('answersstore1');
 Route::post('/answers2',[AnswerController::class,"store2"])->name('answersstore2');
 Route::post('/answers3',[AnswerController::class,"store3"])->name('answersstore3');
 Route::post('/answers4',[AnswerController::class,"store4"])->name('answersstore4');
+Route::post('/answers5',[AnswerController::class,"store5"])->name('answersstore5');
 
 //削除 
 //Route::delete('/answer/{answer}', [AnswerController::class,"destroy"])->name('answer_destroy');

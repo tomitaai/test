@@ -1,35 +1,28 @@
 <x-app-layout>
 
 	<!--ヘッダー[START]-->
-	<x-slot name="header">
-		<div class="flex justify-between">
-			<div class="flex">
-				<div class="sticky top-0 shrink-0">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a>
-                </div>
-        	</div>
-	        <div class="sm:flex sm:items-center">
-		        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+    	<x-slot name="header">
+        	<div class="flex justify-center">
+		        <h2 class="font-extrabold text-2xl bg-clip-text text-transparent bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-white-100 to-orange-500">
 		            Upload
 		        </h2>
-            </div>
-        </div>
+			</div>
 	</x-slot>
 	<!--ヘッダー[END]-->
 
 	<!-- バリデーションエラーの表示に使用-->
 	<x-errors id="errors" class="bg-blue-500 rounded-lg">{{$errors}}</x-errors>
 	<!-- バリデーションエラーの表示に使用-->
+		<div class="bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-slate-100 to-orange-500">
+
+
+
+
+	<div class="py-6 sm:py-8 lg:py-12">
+  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+
+
 	<div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8 border border-gray-200 bg-white">
-
-		<!--<div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">-->
-		<!--	<div class="p-6 bg-white border-b border-gray-500 font-bold">-->
-		<!--		素材のアップロード-->
-		<!--	</div>-->
-		<!--</div>-->
-
 
 
 		<form action="{{ url('posts') }}" method="POST" enctype="multipart/form-data" class="w-full max-w-lg">

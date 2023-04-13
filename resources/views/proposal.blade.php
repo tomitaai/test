@@ -4,7 +4,7 @@
 	<x-slot name="header">
         	<div class="flex justify-center">
 		        <h2 class="font-extrabold text-2xl bg-clip-text text-transparent bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-white-100 to-orange-500">
-		            Hearing Sheet
+		            Proposal Sheet
 		        </h2>
 			</div>
 	</x-slot>
@@ -13,6 +13,9 @@
 	<!-- バリデーションエラーの表示に使用-->
 	<x-errors id="errors" class="bg-blue-500 rounded-lg">{{$errors}}</x-errors>
 	<!-- バリデーションエラーの表示に使用-->
+	
+	
+	
 		<div class="bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-slate-100 to-orange-500">
 
 
@@ -23,11 +26,11 @@
     <!-- text - start -->
     <div class="mb-10 md:mb-16">
 
-      <p class="mx-auto max-w-screen-md text-center text-white md:text-lg">
-      	ご家族にとってピッタリな動画を提案します。
-      </br>いまの気持ちを教えてください。</p>
-      <p class="mx-auto max-w-screen-md text-center text-white md:text-xs">
-      	あとで回答する場合は、空欄のまま進んでください。</p>      
+      <!--<p class="mx-auto max-w-screen-md text-center text-white md:text-lg">-->
+      <!--	ご家族にとってピッタリな動画を提案します。-->
+      <!--</br>いまの気持ちを教えてください。</p>-->
+      <!--<p class="mx-auto max-w-screen-md text-center text-white md:text-xs">-->
+      <!--	あとで回答する場合は、空欄のまま進んでください。</p>      -->
     </div>
     <!-- text - end -->
 	
@@ -36,7 +39,8 @@
 	
 	<div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8 border border-gray-200 bg-white">
 
-		<form action="{{ url('answers1') }}" method="POST" enctype="multipart/form-data" class="w-full max-w-lg">
+
+		<form action="{{ url('answers4') }}" method="POST" enctype="multipart/form-data" class="w-full max-w-lg">
 			@csrf
 
 			<div class="px-6 py-4">
@@ -46,9 +50,9 @@
 						質問
 					</label>
 					<div class="appearance-none block w-full text-gray-700 rounded py-3 px-4 mb-3 leading-tight text-sm">
-					    どんな動画を作成したいですか？
+					    いま、お子様に伝えたい言葉、想いは何ですか？
 					</div>
-					<input name="question" value="お子様がハマっていることを教えてください。" type="hidden">
+					<input name="question" value="" type="hidden">
 
 					<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
 						回答
@@ -72,6 +76,5 @@
 		<!--</div>-->
 	</div>
 	</form>
-</div>
 </div>
 </x-app-layout>

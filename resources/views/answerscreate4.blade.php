@@ -2,20 +2,11 @@
 
 	<!--ヘッダー[START]-->
 	<x-slot name="header">
-		<div class="flex justify-between">
-			<div class="flex">
-				<div class="sticky top-0 shrink-0">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a>
-                </div>
-        	</div>
-	        <div class="sm:flex sm:items-center">
-		        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-		            Questionnaire
+        	<div class="flex justify-center">
+		        <h2 class="font-extrabold text-2xl bg-clip-text text-transparent bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-white-100 to-orange-500">
+		            Hearing Sheet
 		        </h2>
-            </div>
-        </div>
+			</div>
 	</x-slot>
 	<!--ヘッダー[END]-->
 
@@ -25,18 +16,21 @@
 	
 	
 	
+		<div class="bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-slate-100 to-orange-500">
+
+
+
+
 	<div class="py-6 sm:py-8 lg:py-12">
   <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
     <!-- text - start -->
     <div class="mb-10 md:mb-16">
-      <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">ヒアリングシート</h2>
 
-      <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
+      <p class="mx-auto max-w-screen-md text-center text-white md:text-lg">
       	ご家族にとってピッタリな動画を提案します。
       </br>いまの気持ちを教えてください。</p>
-      <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-xs">
-      	あとで回答する場合は、空欄のまま進んでください。</p>
-
+      <p class="mx-auto max-w-screen-md text-center text-white md:text-xs">
+      	あとで回答する場合は、空欄のまま進んでください。</p>      
     </div>
     <!-- text - end -->
 	
@@ -58,7 +52,7 @@
 					<div class="appearance-none block w-full text-gray-700 rounded py-3 px-4 mb-3 leading-tight text-sm">
 					    いま、お子様に伝えたい言葉、想いは何ですか？
 					</div>
-					<input name="question" value="いま、お子様に伝えたい言葉、想いは何ですか？" type="hidden">
+					<input name="question" value="" type="hidden">
 
 					<label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
 						回答

@@ -17,6 +17,7 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
         <div class="sm:max-w-md container mx-auto border">
+		<div class="bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-slate-100 to-orange-500">
 
             <!-- Page Heading -->
 
@@ -31,6 +32,7 @@
             <main>
                 {{ $slot }}
             </main>
+        </div>
         </div>
         </div>
     </body>

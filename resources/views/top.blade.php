@@ -9,7 +9,9 @@
                 </div>
     </x-slot>
 
-<div class="bg-white sticky mx-auto flex w-full sm:max-w-md py-6 sm:py-8 lg:py-12">
+		<div class="bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-slate-100 to-orange-400">
+
+<div class="sticky mx-auto flex w-full sm:max-w-md py-6 sm:py-8 lg:py-12">
   <div class="mx-auto">
     <div class="mx-auto flex max-w-xl flex-col items-center text-center">
       <p class="text-left mb-10 font-semibold text-gray-900 md:mb-12 md:text-2xl xl:text-3xl">
@@ -26,6 +28,7 @@
 明るく照らしますように。</p>
     </div>
   </div>
+</div>
 </div>
 
 

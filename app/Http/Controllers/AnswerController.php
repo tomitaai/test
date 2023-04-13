@@ -49,6 +49,11 @@ class AnswerController extends Controller
         return view('answerscreate4');
     }
 
+    public function create5()
+    {
+        return view('answerscreate5');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -134,6 +139,32 @@ class AnswerController extends Controller
     }
 
     public function store4(Request $request)
+    {
+        //バリデーション
+    $validator = Validator::make($request->all(), [
+        'question' => 'required',
+        'answer' => 'required',
+    ]);
+
+    //バリデーション:エラー 
+    if ($validator->fails()) {
+        return redirect('/')
+            ->withInput()
+            ->withErrors($validator);
+    }
+
+    //以下に登録処理を記述（Eloquentモデル）
+	  // Eloquentモデル
+	  $answers = new Answer;
+
+        $answers->question = $request->question;
+        $answers->answer = $request->answer;
+        $answers->user_id = Auth::id();
+        $answers->save(); 
+        return redirect('/answerscreate5');
+    }
+
+    public function store5(Request $request)
     {
         //バリデーション
     $validator = Validator::make($request->all(), [
