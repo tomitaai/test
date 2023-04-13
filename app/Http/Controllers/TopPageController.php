@@ -11,5 +11,12 @@ class TopPageController extends Controller
     public function show(){
        return view('top');
     }
-	
+    
+    public function proposal(){
+       return view('proposal');
+    }
+
+    public function proposal2(){
+       return view('proposal2');
+    }
 }

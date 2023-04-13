@@ -33,7 +33,8 @@ use App\Models\Answer;
 Route::get('/', [TopPageController::class,'show'])->middleware(['auth'])->name('top');
 Route::get('/dashboard', [TopPageController::class,'show'])->middleware(['auth'])->name('dashboard');
 
-Route::get('/proposal', [TopPageController::class,'show'])->middleware(['auth'])->name('top');
+Route::get('/proposal', [TopPageController::class,'proposal'])->middleware(['auth'])->name('proposal');
+Route::get('/proposal2', [TopPageController::class,'proposal2'])->middleware(['auth'])->name('proposal2');
 
 
 //post：一覧表示
@@ -112,6 +113,8 @@ Route::post('/answers/update',[AnswerController::class,"update"])->name('answer_
 //メールマスタ
 Route::get('/10000', function () {return view('mail.10000');});
 Route::get('/10100', function () {return view('mail.10100');});
+Route::get('/20000', function () {return view('mail.20000');});
+
 
 Route::get('/mailmasterscreate',[MailmasterController::class,"create"])->name('mailmasterscreate');
 Route::post('/mailmasters',[MailmasterController::class,"store"])->name('mailmastersstore');

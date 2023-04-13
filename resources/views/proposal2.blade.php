@@ -22,21 +22,22 @@
 
 
 	<div class="py-6 sm:py-8 lg:py-12">
- <!-- <div class="mx-auto max-w-screen-2xl px-4 md:px-8">-->
+  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+    <!-- text - start -->
+    <div class="mb-10 md:mb-16">
 
+      <p class="mx-auto max-w-screen-md text-center text-gray-800 md:text-lg">
+      	動画のコンセプト・デザインを決定しました！
+      </br>撮影素材のアップロードをお願いします。</p>
+    </div>
 
-	<!--<div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8 border border-gray-200 bg-white">-->
-
-
-    <!--全エリア[START]-->
-
-<div class="container mx-auto">
-    <div class="flex flex-wrap">
+<!--<div class="container mx-auto">-->
+<!--    <div class="flex flex-wrap">-->
 
 <!-- Column -->
-<div class="my-1 px-1 w-full md:w-1/2">
+<!--<div class="my-1 px-1 w-full md:w-1/2">-->
     <!-- Article -->
-    <article class="overflow-hidden rounded-lg m-3">
+<!--    <article class="overflow-hidden rounded-lg m-3">-->
     
 <a href="{{ url('proposal2') }}" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100">
             
@@ -50,27 +51,6 @@
     
 </div>
 <!-- END Column -->
-
-<div class="my-1 px-1 w-full md:w-1/2">
-    <!-- Article -->
-    <article class="overflow-hidden rounded-lg m-3">
-    
-<a href="{{ url('proposal2') }}" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100">
-            
-            
-            
-    <img alt="material" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" src = "{{asset('storage/materials/2.png') }}">
-
-        </a>    
-    </article>
-    <!-- END Article -->
-    
-</div>
-<!-- END Column -->
-
-    </div>
-</div>
-
 
 
 

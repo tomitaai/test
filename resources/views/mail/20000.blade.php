@@ -1,24 +1,16 @@
 <x-app-layout>
 
 	<!--ヘッダー[START]-->
-	<x-slot name="header">
-		<div class="flex justify-between">
-			<div class="flex">
-				<div class="sticky top-0 shrink-0">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a>
-                </div>
-        	</div>
-	        <div class="sm:flex sm:items-center">
-		        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+    	<x-slot name="header">
+        	<div class="flex justify-center">
+		        <h2 class="font-extrabold text-2xl bg-clip-text text-transparent bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-white-100 to-orange-500">
 		            Proposal
 		        </h2>
-            </div>
-        </div>
+			</div>
 	</x-slot>
 	<!--ヘッダー[END]-->
 
+		<div class="bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-slate-100 to-orange-500">
 
 	<div class="py-6 sm:py-8 lg:py-12">
 	    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -34,7 +26,7 @@
       	</div>
     <!-- text - end -->
     
-    <div class="rounded overflow-hidden shadow-lg mx-auto m-6 mt-border border-gray-200 bg-white">
+    <div class="rounded overflow-hidden shadow-lg mx-auto  mt-border border-gray-200 bg-white">
 
         <div class="rounded flex h-full items-center mb-3">
           <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
@@ -45,25 +37,24 @@
         </div>
 
         <p class="text-base text-gray-700 text-sm">
-            気づけば、お子様のピンショットばかり...ということも多いです。産後の体調の変化や睡眠不足などで慌ただしい時期かと思いますが、ご家族の様子も一緒に撮影いただくことをおすすめします。育児でてんてこ舞いな様子をのこしておくのも、意外といい想い出になるかもしれません。
+            卒業式は、お子様にとって一つの大きな節目だと思いますが、親御様にとっても大きな節目として、いろいろな想いをお持ちだと思います。卒園式でのお子様の様子だけでなく、お子様を見守る親御様自身の姿やその帰り道の様子もぜひ撮影してください。また、そのときのお気持ちもアップロードしてください。
         </p>
       </div>
     </div>
     </div>
 
-	<div class="mx-auto max-w-screen-2xl px-4">
+	<div class="mx-auto max-w-screen-2xl px-4 py-4">
     
     <div class="flex items-center justify-center">
       <div class="flex flex-col items-end">
-        <img
-          class="object-cover mb-6 rounded shadow-lg h-28 h-48 w-48"
-          src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-          alt=""
-        />
-        <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+        <img class="object-cover mb-6 rounded shadow-lg h-28 h-48 w-48"
+        alt="sample" src = "{{asset('storage/materials/20000_1.png')}}">
+        <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
+        alt="sample" src = "{{asset('storage/materials/20000_2.png')}}">
       </div>
       <div class="px-3">
-        <img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" alt="" />
+        <img class="object-cover w-40 h-30 rounded shadow-lg sm:h-55 xl:h-80 sm:w-64 xl:w-80"
+        alt="sample" src = "{{asset('storage/materials/20000_3.png')}}">
       </div>
     </div>
   </div>

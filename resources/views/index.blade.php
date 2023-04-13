@@ -13,11 +13,21 @@
         <!-- バリデーションエラーの表示に使用-->
        <x-errors id="errors" class="bg-blue-500 rounded-lg">{{$errors}}</x-errors>
         <!-- バリデーションエラーの表示に使用-->
-        
+		<div class="bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-indigo-400 via-slate-100 to-orange-500">
+
+
+
+
+	<div class="py-6 sm:py-8 lg:py-12">
+ <!-- <div class="mx-auto max-w-screen-2xl px-4 md:px-8">-->
+
+
+	<!--<div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8 border border-gray-200 bg-white">-->
+
 
     <!--全エリア[START]-->
 
-<div class="container my-8 mx-auto">
+<div class="container mx-auto">
     <div class="flex flex-wrap">
 
             @if (count($posts) > 0)
@@ -35,6 +45,12 @@
 <div>
     {{ $posts->links()}}
 </div>
+<!--</div>-->
+<!--</div>-->
+</div>
+</div>
+
+
  <!--全エリア[END]-->
 
 <div class="bg-white">
