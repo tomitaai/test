@@ -209,6 +209,51 @@
         #スマイル
       </label>
       </div>
+      
+            </div>
+					<div class="flex">
+
+      		    <div class="inline-block flex items-center mr-4">
+		    <input
+        type="checkbox"
+        name="answer[10]"
+        id="checkbox11"
+        class="hidden peer"/>
+      <label
+      	class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-400 mr-2 border-2 border-gray-200 cursor-pointer peer-checked:border-blue-600 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50"
+        for="checkbox11">
+        #撮って出しエンドロール
+      </label>
+      </div>
+      
+      
+            </div>
+					<div class="flex">
+
+      		    <div class="inline-block flex items-center mr-4">
+		    <input
+        type="checkbox"
+        name="answer[11]"
+        id="checkbox12"
+        class="hidden peer"/>
+      <label
+      	class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-400 mr-2 border-2 border-gray-200 cursor-pointer peer-checked:border-blue-600 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50"
+        for="checkbox12">
+        #記録ビデオ
+      </label>
+      </div>
+      		    <div class="inline-block flex items-center mr-4">
+		    <input
+        type="checkbox"
+        name="answer[12]"
+        id="checkbox13"
+        class="hidden peer"/>
+      <label
+      	class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-400 mr-2 border-2 border-gray-200 cursor-pointer peer-checked:border-blue-600 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50"
+        for="checkbox13">
+        #寄せ書きビデオ
+      </label>
+      </div>
 
 			</div>
 
